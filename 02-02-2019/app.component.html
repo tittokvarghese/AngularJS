@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Online doctor point appointments is a smart web application</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<app-header></app-header>
+
+<section>
+
+    <app-sidebar></app-sidebar>
+  
+  <article>
+
+    <b>SignUp Now - Conntecting Together - TogoFine</b>
+    <br>
+    <form #f="ngForm" (submit)="signup(f)">
+        <input type="text" id="username" [(ngModel)]="users.username" placeholder="Username">
+        <br>
+        <input type="password" id="pwd" [(ngModel)]="users.pwd" placeholder="Password">
+        <br>
+        <input type="submit" name="submit" value="SignUp">
+        
+    </form>
+    
+    <br>
+    <br>
+
+    <h1>Online doctor point appointments is a smart web application</h1>
+
+My name is {{user.name}}<br>
+I m {{user.job}}
+
+<button (click)="togo()">CLICK</button>
+<div *ngIf=!click>
+Titto
+
+</div>
+
+
+
+<p *ngFor="let userjob of user.phone">{{userjob}}</p>
+
+
+<router-outlet></router-outlet>
+    <br>
+
+
+
+
+
+    <p>This provides 
+        a registration and login for both doctors and patients. 
+        Doctors can register by giving his necessary details like timings, 
+        fee, category etc. after successful registration the doctor 
+        can login by giving username and password. 
+        The doctor can view the booking request by patients. 
+        The patients must be registered and login to book a doctor based 
+        on the category and the give the problem patient is facing and 
+        the location. The search results will show the list of doctors matching 
+        patients required criteria and he can select one and send a request.</p>
+  </article>
+</section>
+
+<app-footer></app-footer>
+
+</body>
+</html>
+
+
+
